@@ -7,7 +7,7 @@
 ### ㅤㅤ
 **<p align = "center">Lady Paola Olaez Martinez Id=481624</p>**
 **<p align = "center">Jonathan Alexander Gonzalez Leon Id=733581</p>**
-**<p align = "center">Bibina Id=?</p>**
+**<p align = "center">Angie Bibina Forero Guzaman Id=687310</p>**
 ### ㅤㅤ
 ### ㅤㅤ
 **<p align = "center">Mayo 2022</p>**
