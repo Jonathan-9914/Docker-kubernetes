@@ -33,6 +33,7 @@
  
 [Docker]: https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md
 [que es]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#text
+ [Como se compone]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#contenido
 <div id='id1' />
 # Primer apartado
 Texto del primer apartado
