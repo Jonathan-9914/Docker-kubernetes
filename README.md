@@ -22,13 +22,11 @@
 1. [Docker] 
       - [Que es](#id1)
       - [Como se compone](#id1)
-      - [Tipos o definiciones](#id1) 
       - [Como usarlo en AWS](#id1)
           - [Que necesito](#id1)
 3. [kubernetes](#id2)
       - [Que es](#id1)
       - [Como se compone](#id1)
-      - [Tipos o definiciones](#id1) 
       - [Como usarlo en AWS](#id1)
           - [Que necesito](#id1)
  
