@@ -52,7 +52,7 @@ Texto del segundo apartado
 <p align="left"><a href="https://www.docker.com/"><img width="200" src="https://blog.chun.no/images/2014-06-01-docker.gif" alt="Docker"></a></p>
 
 <style>
-      @import '/src/styles/styles.css';
+ import '/src/styles/styles.css';
 </style>
 
 
