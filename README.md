@@ -47,7 +47,7 @@ Texto del segundo apartado
 
 # ***<p align = "center">Docker & kubernetes</p>***
 
-<p align="center"><a href="https://www.docker.com/"><img width="200" align="center" src="https://1000marcas.net/wp-content/uploads/2021/05/Docker-Logo-2013.png" alt="Docker"></a></p>
+<p align="center" class="prueba"><a href="https://www.docker.com/"><img width="200" align="center" src="/src/img/kubernetes.png" alt="Docker"></a></p>
 
 <p align="left"><a href="https://www.docker.com/"><img width="200" src="https://blog.chun.no/images/2014-06-01-docker.gif" alt="Docker"></a></p>
 
