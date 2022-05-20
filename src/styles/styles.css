@@ -1,4 +1,7 @@
 .prueba{
-position:relative;
-right:500px;
+ position: absolute;
+  top: 50px;
+  left: 50px;
 }
+
+
