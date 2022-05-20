@@ -53,7 +53,7 @@ Texto del segundo apartado
 
 <style>
  import '/src/styles/styles.css';
-</style>
+<style/>
 
 
 
