@@ -21,7 +21,7 @@
 # **Índice**
 1. [Docker] 
       - [Que es] paola
-      - [Como se compone](#id1) bibiana
+      - [Como se compone] bibiana
          - [Que necesito](#id1)
       - [Como usarlo en AWS](#id1) jhonatan
           - [Que necesito](#id1)
