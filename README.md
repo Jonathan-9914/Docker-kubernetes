@@ -20,7 +20,7 @@
 [comment]: # (Creacion del indice)
 # **Índice**
 1. [Docker] 
-      - [Que es](#id1)
+      - [Que es]
       - [Como se compone](#id1)
       - [Como usarlo en AWS](#id1)
           - [Que necesito](#id1)
