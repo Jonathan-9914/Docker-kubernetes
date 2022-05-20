@@ -20,14 +20,14 @@
 [comment]: # (Creacion del indice)
 # **Índice**
 1. [Docker] 
-      - [Que es]
-      - [Como se compone](#id1)
-      - [Como usarlo en AWS](#id1)
+      - [Que es] paola
+      - [Como se compone](#id1) bibiana
+      - [Como usarlo en AWS](#id1) jhonatan
           - [Que necesito](#id1)
 3. [kubernetes](#id2)
-      - [Que es](#id1)
-      - [Como se compone](#id1)
-      - [Como usarlo en AWS](#id1)
+      - [Que es](#id1) jhonatan
+      - [Como se compone](#id1)  bibiana
+      - [Como usarlo en AWS](#id1) paola
           - [Que necesito](#id1)
  
 [Docker]: https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md
