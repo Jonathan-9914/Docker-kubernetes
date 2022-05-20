@@ -31,6 +31,7 @@
           - [Que necesito](#id1)
  
 [Docker]: https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md
+[que es]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#text
 <div id='id1' />
 # Primer apartado
 Texto del primer apartado
