@@ -50,7 +50,7 @@ Texto del segundo apartado
 <div align="center" style="vertical-align:center" >
 <div align="" style="vertical-align:center">
 <a href="https://kubernetes.io/"><img width="200" align="vertical-align:middle" src="/src/img/kubernetes.png" alt="Kubernetes"></a>
-<a href="https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md"><img width="200" align="vertical-align:middle" src="/src/img/kubernetes.png" alt="Docker"></a>
+<a href="https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md"><img width="250" align="vertical-align:middle" src="https://1000marcas.net/wp-content/uploads/2021/05/Docker-Logo-2013.png" alt="Docker"></a>
 </div>
 </div>
 
