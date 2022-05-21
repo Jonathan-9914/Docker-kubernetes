@@ -48,11 +48,12 @@ Texto del segundo apartado
 # ***<p align = "center">Docker & kubernetes</p>***
 
 <div align="center" style="vertical-align:center" >
-<div align="" style="vertical-align:middle"><a href="https://www.docker.com/"><img width="200" align="right" src="/src/img/kubernetes.png" alt="Docker"></a></div>
 
-<div align="" style="vertical-align:center"><a href="https://www.docker.com/"><img width="200" align="left" src="https://blog.chun.no/images/2014-06-01-docker.gif" alt="Docker"></a></div>
+<div align="" style="vertical-align:center"><a href="https://www.docker.com/"><img width="200" align="left" src="https://blog.chun.no/images/2014-06-01-docker.gif" alt="Docker"></a><img width="200" align="vertical-align:middle" style="vertical-align:middle" src="/src/img/kubernetes.png" alt="Docker"></div>
 </div>
-
+<!--
+<div align="" style="vertical-align:middle"><a href="https://www.docker.com/"><img width="200" align="right" style="vertical-align:middle" src="/src/img/kubernetes.png" alt="Docker"></a></div>
+-->
 
 
 
