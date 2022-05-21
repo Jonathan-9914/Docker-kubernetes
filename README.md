@@ -28,13 +28,12 @@
 3. [kubernetes](#id2)
       - [Que es](#id1) jhonatan
       - [Como se compone](#id1)  bibiana
-      $ ~ $
       - [Como usarlo en AWS](#id1) paola
           - [Que necesito](#id1)
  
 [Docker]: https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md
 [que es]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#text
- [Como se compone]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#contenido
+[Como se compone]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#contenido
 <div id='id1' />
 # Primer apartado
 Texto del primer apartado
@@ -48,14 +47,9 @@ Texto del segundo apartado
 
 # ***<p align = "center">Docker & kubernetes</p>***
 
-<p align="center" class="prueba"><a href="https://www.docker.com/"><img width="200" align="center" src="/src/img/kubernetes.png" alt="Docker"></a></p>
+<p align="Absbottom" class="prueba"><a href="https://www.docker.com/"><img width="200" style="position:relative;  top: 0px; right: 500px" src="/src/img/kubernetes.png" alt="Docker"></a></p>
 
-<p align="left"><a href="https://www.docker.com/"><img width="200" src="https://blog.chun.no/images/2014-06-01-docker.gif" alt="Docker"></a></p>
-
-@import '/src/styles/styles.css';
-
-
-
+<p align="middle"><a href="https://www.docker.com/"><img width="200" align="right" src="https://blog.chun.no/images/2014-06-01-docker.gif" alt="Docker"></a></p>
 
 
 
