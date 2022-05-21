@@ -49,8 +49,8 @@ Texto del segundo apartado
 
 <div align="center" style="vertical-align:center" >
 <div align="" style="vertical-align:center">
- <a href="https://kubernetes.io/"><img width="200" align="vertical-align:middle" src="/src/img/kubernetes.png" alt="Kubernetes"></a></div>
-<a href="https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md"><img width="200" align="vertical-align:middle" src="https://blog.chun.no/images/2014-06-01-docker.gif" alt="Docker"></a>
+ <a href="https://kubernetes.io/"><img width="200" align="vertical-align:middle" src="/src/img/kubernetes.png" alt="Kubernetes"></a>
+<a href="https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md"><img width="200" align="vertical-align:middle" src="https://blog.chun.no/images/2014-06-01-docker.gif" alt="Docker"></a></div>
      
 </div>
 
