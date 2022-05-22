@@ -23,8 +23,17 @@
       - [Que es]
       - [Como se compone] bibiana
          - [Que necesito](#id1)
-      - [Como usarlo en AWS](#id1) jhonatan
-          - [Que necesito](#id1)
+      - [La ejecución de Docker en AWS]
+         - [Ejecute Docker en AWS]
+         - [Como usarlo en AWS] jhonatan
+         - Implemente aplicaciones en Amazon ECS mediante Docker Compose 
+            - Uso de Docker Compose para ampliar las inversiones existentes
+            - Uso de Docker Compose para mejorar la experiencia del desarrollador de ECS
+
+
+
+
+         - [Que necesito]
 3. [kubernetes](#id2)
       - [Que es](#id1) jhonatan
       - [Como se compone](#id1)  bibiana
