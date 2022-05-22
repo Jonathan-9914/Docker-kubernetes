@@ -36,7 +36,7 @@
             - [Limpiar]
       - [Que necesito]
 3. [kubernetes](#id2)
-      - [Que es](#id1) jhonatan
+      - [Que es]
       - [Como se compone](#id1)  bibiana
       - [Como usarlo en AWS](#id1) paola
           - [Que necesito](#id1)
@@ -58,12 +58,9 @@
 [Envíe su imagen a Amazon Elastic Container Registry]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#env%C3%ADe-su-imagen-a-amazon-elastic-container-registry
 [Limpiar]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#limpiar
 [Que necesito]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#que-necesito
-<div id='id1' />
-# Primer apartado
-Texto del primer apartado
-<div id='id2' />
-# Segundo apartado
-Texto del segundo apartado
+
+<!-- indice kubernetes-->
+[Que es]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#que-es
 
 ### ㅤ
 ---
