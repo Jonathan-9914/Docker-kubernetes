@@ -429,4 +429,83 @@ Algunas versiones de Docker pueden requerir la ruta completa a su Dockerfile en 
 docker build -t hello-world .
 ~~~
 4. Ejecute Docker Images para verificar que la imagen se creó correctamente.
+~~~
+docker images --filter reference=hello-world
+~~~
+Producción:
+~~~
+ID DE LA IMAGEN DE LA ETIQUETA DEL REPOSITOR TAMAÑO CREADO
+hola-mundo último e9ffedc8c286 Hace 4 minutos 241MB
+~~~
 
+5. Ejecute la imagen recién construida. La -p 80:80opción asigna el puerto 80 expuesto en el contenedor al puerto 80 en el sistema host. Para obtener más información sobre la ejecución de Docker , vaya a la referencia de ejecución de Docker.
+~~~
+docker run -t -i -p 80:80 hello-world
+~~~
+**Nota**
+La salida del servidor web Apache se muestra en la ventana del terminal. Puede ignorar el Could not reliably determine the server's fully qualified domain namemensaje " ".
+
+6. Abra un navegador y señale el servidor que ejecuta Docker y aloja su contenedor.
+
+- Si usa una instancia EC2, este es el valor de DNS público para el servidor, que es la misma dirección que usa para conectarse a la instancia con SSH. Asegúrese de que el grupo de seguridad de su instancia permita el tráfico entrante en el puerto 80.
+
+- Si está ejecutando Docker localmente, apunte su navegador a http://localhost/.
+
+- Si está utilizando docker-machine en una computadora con Windows o Mac, busque la dirección IP de la VM de VirtualBox que aloja a Docker con el comando docker-machine ip , sustituyéndola machine-namepor el nombre de la máquina docker que está utilizando.
+
+~~~
+docker-machine ip machine-name
+~~~
+Debería ver una página web con su "¡Hola mundo!" declaración.
+
+7. Detenga el contenedor Docker escribiendo Ctrl + c .
+
+## Envíe su imagen a Amazon Elastic Container Registry
+
+Amazon ECR es un servicio de registro de AWS Docker administrado. Puede usar la CLI de Docker para insertar, extraer y administrar imágenes en sus repositorios de Amazon ECR. Para obtener detalles de productos de Amazon ECR, estudios de casos de clientes destacados y preguntas frecuentes, consulte las páginas de detalles de productos de Amazon Elastic Container Registry..
+
+**Para etiquetar su imagen y enviarla a Amazon ECR**
+
+1. Cree un repositorio de Amazon ECR para almacenar su hello-worldimagen. Tenga en cuenta repositoryUrien la salida.
+Sustituya region, con su región de AWS, por ejemplo, us-east-1.
+~~~
+aws ecr create-repository --repository-name hello-repository --region region
+~~~
+producción:
+~~~
+{ 
+    "repositorio": { 
+        "registryId": " aws_account_id",
+        "repositoryName": "hola-repositorio",
+        "repositoryArn": "arn:aws:ecr: region: aws_account_id:repositorio/hola-repositorio",
+        "creado en": 1505337806.0,
+        "repositoryUri": " aws_account_id.dkr.ecr. region.amazonaws.com/hello-repository"
+    }
+}
+~~~
+2. Etiquete la hello-worldimagen con el repositoryUri valor del paso anterior.
+~~~
+docker tag hello-world aws_account_id.dkr.ecr.region.amazonaws.com/hello-repository
+~~~
+3. Ejecute el comando aws ecr get-login-password . Especifique el URI de registro en el que desea autenticarse. Para obtener más información, consulte Autenticación del registro en la Guía del usuario de Amazon Elastic Container Registry.
+~~~
+aws ecr get-login-password | docker login --username AWS --password-stdin aws_account_id.dkr.ecr.region.amazonaws.com
+~~~
+Producción:
+~~~
+Inicio de sesión exitoso
+~~~
+**Importante**
+
+Si recibe un error, instale o actualice a la última versión de AWS CLI. Para obtener más información, consulte Instalación de la interfaz de línea de comandos de AWS en la Guía del usuario de la interfaz de línea de comandos de AWS.
+
+4. Envíe la imagen a Amazon ECR con el repositoryUrivalor del paso anterior.
+~~~
+docker push aws_account_id.dkr.ecr.region.amazonaws.com/hello-repository
+~~~
+
+### Limpiar
+Para continuar con la creación de una definición de tareas de Amazon ECS y el lanzamiento de una tarea con su imagen de contenedor, salte a los Siguientes pasos . Cuando haya terminado de experimentar con su imagen de Amazon ECR, puede eliminar el repositorio para que no se le cobre por el almacenamiento de imágenes.
+~~~
+aws ecr delete-repository --repository-name hello-repository --region region --force
+~~~
