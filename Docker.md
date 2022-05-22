@@ -75,8 +75,8 @@ Los pasos que aparecen a continuación le ayudarán a comenzar a usar Docker en 
 <div align="center">
 <a href="https://aws.amazon.com/es/batch/"><img width="180" align="vertical-align:middle" src="https://d1.awsstatic.com/Digital%20Marketing/icon2.623e85d1e491004eb9ec929e9ebe4631b75d61e5.png"></a></div>
 
-##### <p align = "center">Inscribirse en una cuenta de AWS</p>
-[<p align = "center">Obtenga acceso instantáneo a la capa gratuita de AWS.</p>](https://aws.amazon.com/es/free/)
+##### <p align = "center">Implemente contenedores de Docker en 10 minutos</p>
+[<p align = "center">Utilizar Docker Desktop: implemente contenedores de Docker en Amazon ECS en este simple tutorial con la CLI de Docker.</p>](https://aws.amazon.com/blogs/containers/deploy-applications-on-amazon-ecs-using-docker-compose/)
 
 
 
