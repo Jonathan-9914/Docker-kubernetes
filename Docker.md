@@ -517,4 +517,17 @@ aws ecr delete-repository --repository-name hello-repository --region region --f
 [<p align = "center">Conceptos básicos de Docker</p>](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html)
 [<p align = "center">Integración de Docker o ECS</p>](https://docs.docker.com/engine/context/ecs-integration)
 
+## **Que necesito**
 
+#### requisitos previos
+Antes de comenzar, asegúrese de que se cumplan los siguientes requisitos previos.
+
+- Asegúrese de haber completado los pasos de configuración de Amazon ECR. Para obtener más información, consulte Configuración de Amazon ECR en la Guía del usuario de Amazon Elastic Container Registry .
+
+- Su usuario tiene los permisos de IAM necesarios para acceder y utilizar el servicio Amazon ECR. Para obtener más información, consulte Políticas administradas de Amazon ECR .
+
+- Tienes Docker instalado. Para conocer los pasos de instalación de Docker para Amazon Linux 2, consulte Instalación de Docker en Amazon Linux 2 . Para todos los demás sistemas operativos, consulte la documentación de Docker en la descripción general de Docker Desktop.
+
+- Tiene la CLI de AWS instalada y configurada. Para obtener más información, consulte Instalación de la interfaz de línea de comandos de AWS en la Guía del usuario de la interfaz de línea de comandos de AWS .
+
+Si no tiene o necesita un entorno de desarrollo local y prefiere usar una instancia de Amazon EC2 para usar Docker, proporcionamos los siguientes pasos para lanzar una instancia de Amazon EC2 usando Amazon Linux 2 e instalar Docker Engine y la CLI de Docker.
