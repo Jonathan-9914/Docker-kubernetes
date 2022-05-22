@@ -34,11 +34,7 @@
             - [Crear una imagen de Docker]
             - [Envíe su imagen a Amazon Elastic Container Registry]
             - [Limpiar]
-
-
-
-
-         - [Que necesito]
+      - [Que necesito]
 3. [kubernetes](#id2)
       - [Que es](#id1) jhonatan
       - [Como se compone](#id1)  bibiana
@@ -61,7 +57,7 @@
 [Crear una imagen de Docker]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#crear-una-imagen-de-docker
 [Envíe su imagen a Amazon Elastic Container Registry]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#env%C3%ADe-su-imagen-a-amazon-elastic-container-registry
 [Limpiar]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#limpiar
-
+[Que necesito]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#que-necesito
 <div id='id1' />
 # Primer apartado
 Texto del primer apartado
