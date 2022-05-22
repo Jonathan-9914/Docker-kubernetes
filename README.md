@@ -20,7 +20,7 @@
 [comment]: # (Creacion del indice)
 # **Índice**
 1. [Docker] 
-      - [Que es]
+      - [Que es Docker]
       - [Como se compone] bibiana
          - [Que necesito](#id1)
       - [La ejecución de Docker en AWS]
@@ -36,7 +36,7 @@
             - [Limpiar]
       - [Que necesito]
 3. [kubernetes](#id2)
-      - [Que es]
+      - [Que es Kubernetes]
       - [Como se compone](#id1)  bibiana
       - [Como usarlo en AWS](#id1) paola
           - [Que necesito](#id1)
@@ -60,7 +60,7 @@
 [Que necesito]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#que-necesito
 
 <!-- indice kubernetes-->
-[Que es]: https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#que-es
+[Que es Kubernetes]: https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#que-es
 
 ### ㅤ
 ---
