@@ -64,3 +64,14 @@ AWS proporciona soporte técnico para Docker de código abierto y para sus soluc
 ## **Como usarlo en AWS**
 
 Los pasos que aparecen a continuación le ayudarán a comenzar a usar Docker en AWS  en cuestión de minutos.
+
+<div align="center">
+<a href="https://aws.amazon.com/es/batch/"><img width="200" align="vertical-align:middle" src="https://d1.awsstatic.com/Digital%20Marketing/icon1.e8803ca4304aca252ee0aa510c3908cb69fab31b.png"></a></div>
+
+##### <p align = "center">Inscribirse en una cuenta de AWS</p>
+[<p align = "center">Obtenga acceso instantáneo a la capa gratuita de AWS.</p>](https://aws.amazon.com/es/free/)
+
+
+
+
+
