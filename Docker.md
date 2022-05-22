@@ -39,8 +39,22 @@ AWS proporciona soporte técnico para Docker de código abierto y para sus soluc
 
 <div align="center" style="vertical-align:center" >
 <div align="" style="vertical-align:center">
-<a href="https://aws.amazon.com/es/ecs/"><img width="250" align="vertical-align:middle" src="src/img/servicio1.png" alt="Docker"></a> ㅤ ㅤ ㅤ ㅤ ㅤ ㅤ
+<a href="https://aws.amazon.com/es/ecs/"><img width="255" align="vertical-align:middle" src="src/img/servicio6.png" alt="Docker"></a> ㅤ ㅤ ㅤ ㅤ ㅤ ㅤ
 <a href="https://aws.amazon.com/es/fargate/"><img width="270" align="vertical-align:middle" src="src/img/servicio5.png" alt="Kubernetes"></a></div>
 </div>
 
+### ㅤㅤ
 
+<div align="center" style="vertical-align:center" >
+<div align="" style="vertical-align:center">
+<a href="https://aws.amazon.com/es/eks/"><img width="280" align="vertical-align:middle" src="src/img/servicio4.png"></a> ㅤ ㅤ ㅤ ㅤ ㅤ ㅤ
+<a href="https://aws.amazon.com/es/ecr/"><img width="270" align="vertical-align:middle" src="src/img/servicio3.png"></a></div>
+</div>
+
+### ㅤㅤ
+
+<div align="center" style="vertical-align:center" >
+<div align="" style="vertical-align:center">
+<a href="https://aws.amazon.com/es/batch/"><img width="276" align="vertical-align:middle" src="src/img/servicio2.png"></a> ㅤ ㅤ ㅤ ㅤ ㅤ ㅤ
+<a href="https://aws.amazon.com/es/containers/copilot/"><img width="270" align="vertical-align:middle" src="src/img/servicio1.png"></a></div>
+</div>
