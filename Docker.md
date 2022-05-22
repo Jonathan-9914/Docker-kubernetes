@@ -98,4 +98,31 @@ Entra Yelb . Yelb es una aplicación web tradicional con cuatro componentes: una
 <div align="center">
 <img width="700" align="vertical-align:middle" src="https://d2908q01vomqb2.cloudfront.net/fe2ef495a1152561572949784c16bf23abb28057/2020/11/18/image-76.png"></div>
 
+A medida que comencé a aprender diferentes soluciones basadas en contenedores a lo largo de los años, las apliqué a Yelb. Hoy puede implementar una versión en contenedor de Yelb con Docker Compose, Kubernetes y ECS . Esto me obligó a crear toda la coreografía YAML para cada uno de los orquestadores (en el orden específico que mencioné) mientras usaba las mismas imágenes de contenedor.
+
+Desde que comenzamos esta colaboración con Docker, continué preguntándome: “¿Qué pasa si no quiero o no puedo dedicar tiempo a volver a crear el archivo YAML original de Docker Compose en un archivo ECS YAML nativo ? ¿Funcionaría esta integración de Docker Compose/ECS para Yelb?” Mi archivo Yelb Docker Compose es uno entre los 650.000 que mencioné anteriormente.
+
+Curiosamente, mi prueba funcionó de inmediato con el archivo Docker Compose que creé hace más de 4 años .
+
+Déjame mostrarte cómo es la experiencia del desarrollador. Más adelante, tocaremos la mecánica de cómo funciona esto detrás de escena. Por ahora lo único que necesitas es Docker Desktop y una cuenta de AWS . Para esta prueba, estoy usando Docker Desktop (estable) versión 2.5.0.1.
+
+Lo primero que debe hacer es clonar el repositorio de Yelb y pasar al directorio de implementación que incluye el archivo Compose YAML en el repositorio ( docker-compose.yaml):
+
+~~~
+➜ git clone https://github.com/mreferre/yelb 
+Cloning into 'yelb'...
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 805 (delta 0), reused 0 (delta 0), pack-reused 801
+Receiving objects: 100% (805/805), 3.41 MiB | 1.25 MiB/s, done.
+Resolving deltas: 100% (416/416), done.
+
+➜ cd ./yelb/deployments/platformdeployment/Docker/
+
+➜ ls
+README.md docker-compose.yaml stack-deploy.yaml
+~~~
+
+Ahora podemos docker-compose upel archivo Compose YAML en el repositorio. Esto, por defecto, creará una instancia de la aplicación Yelb en su estación de trabajo:
 
