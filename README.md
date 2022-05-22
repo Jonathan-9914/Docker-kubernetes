@@ -60,7 +60,7 @@
 [Que necesito]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#que-necesito
 
 <!-- indice kubernetes-->
-[Que es]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#que-es
+[Que es]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#Que-es
 
 ### ㅤ
 ---
