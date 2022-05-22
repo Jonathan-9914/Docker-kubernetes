@@ -126,3 +126,109 @@ README.md docker-compose.yaml stack-deploy.yaml
 
 Ahora podemos docker-compose upel archivo Compose YAML en el repositorio. Esto, por defecto, creará una instancia de la aplicación Yelb en su estación de trabajo:
 
+~~~
+➜ docker-compose up -d
+Creating network "docker_yelb-network" with driver "bridge"
+Creating docker_yelb-db_1 ... done
+Creating docker_redis-server_1 ... done
+Creating docker_yelb-appserver_1 ... done
+Creating docker_yelb-ui_1 ... done
+~~~
+
+Puede probar que todo funciona apuntando su navegador web a la http://localhostde su máquina. Debería ver la aplicación de votación de Yelb:
+
+<div align="center">
+<img width="700" align="vertical-align:middle" src="https://d2908q01vomqb2.cloudfront.net/fe2ef495a1152561572949784c16bf23abb28057/2020/11/18/image-77.png"></div>
+
+Si la prueba fue exitosa, ahora puede romper su pila local ejecutando docker-compose down. Si proviene de Docker, probablemente haya utilizado este flujo de trabajo miles de veces durante varios años. Nada nuevo aquí.
+
+Como solemos decir, una imagen vale más que 1000 palabras. Esta es una representación visual del flujo que acabamos de ejecutar (observe que aún no se implementa nada en la nube de AWS):
+
+<div align="center">
+<img width="700" align="vertical-align:middle" src="https://d2908q01vomqb2.cloudfront.net/fe2ef495a1152561572949784c16bf23abb28057/2020/11/18/image-78.png"></div>
+
+Veamos ahora cómo podemos implementar la misma pila en ECS. Para hacer esto, debemos preparar nuestro entorno Docker Desktop .
+
+Primero, crearemos un nuevo contexto de ventana acoplable para que la CLI de Docker pueda apuntar a un punto final diferente. De forma predeterminada, Docker apunta a un contexto local llamado default(que es el tiempo de ejecución de Docker en su máquina), pero agregaremos un contexto de Amazon ECS con el comando docker context create ecs.
+
+Una nota sobre las credenciales de AWS: si ya está familiarizado con AWS, probablemente ya tenga listo su entorno AWS CLI con un perfil predeterminado o con nombre. Está bien, la CLI de Docker puede usar esas credenciales. De lo contrario, el flujo de trabajo de Docker le permitirá leer las variables de entorno con sus credenciales de AWS ( AWS_ACCESS_KEY_IDy AWS_SECRET_ACCESS_KEY) o le pedirá esas credenciales y las almacenará por usted (en $HOME/.aws/credentials).
+
+En este ejemplo, apunto el flujo de trabajo de Docker a mi perfil de AWS existente:
+
+~~~
+➜ docker context create ecs myecscontext
+? Create a Docker context using: An existing AWS profile
+? Select AWS Profile default
+Successfully created ecs context "myecscontext"  
+~~~
+
+Ahora, Docker tiene una llamada de contexto adicional myecscontext(o tipo ecs) que apunta a mi perfil predeterminado de AWS CLI existente. Tenga en cuenta que también estamos configurando myecscontextpara que sea nuestro nuevo contexto activo (que está marcado con un *):
+
+~~~
+➜ docker context ls                     
+NAME                TYPE                DESCRIPTION                               DOCKER ENDPOINT               KUBERNETES ENDPOINT   ORCHESTRATOR
+default *           moby                Current DOCKER_HOST based configuration   unix:///var/run/docker.sock                         swarm
+myecscontext        ecs                                                                                                               
+➜ docker context use myecscontext
+myecscontext
+➜ docker context ls              
+NAME                TYPE                DESCRIPTION                               DOCKER ENDPOINT               KUBERNETES ENDPOINT   ORCHESTRATOR
+default             moby                Current DOCKER_HOST based configuration   unix:///var/run/docker.sock                         swarm
+~~~
+
+Las credenciales en el perfil de AWS deben tener suficientes permisos para implementar la aplicación en AWS. Esto incluye permisos para crear, por ejemplo, VPC, tareas de ECS, balanceadores de carga, etc.
+
+Ahora vamos a poner la pila de Yelb en vivo en la nube.
+
+Tenga en cuenta cómo ahora estoy usando el binario principal de la ventana acoplable para hacer esto, en lugar del docker-composebinario que he usado anteriormente para implementar localmente. El dockerbinario ahora viene con una funcionalidad ampliada para docker compose up(más sobre esto más adelante).
+
+~~~
+➜ docker compose up 
+WARN[0001] networks.driver: unsupported attribute       
+[+] Running 26/26
+ ⠿ docker                              CreateComplete                                                                                                        345.5s
+ ⠿ YelbuiTCP80TargetGroup              CreateComplete                                                                                                          0.0s
+ ⠿ LogGroup                            CreateComplete                                                                                                          2.2s
+ ⠿ YelbuiTaskExecutionRole             CreateComplete                                                                                                         14.0s
+ ⠿ YelbnetworkNetwork                  CreateComplete                                                                                                          5.0s
+ ⠿ YelbdbTaskExecutionRole             CreateComplete                                                                                                         14.0s
+ ⠿ CloudMap                            CreateComplete                                                                                                         48.3s
+ ⠿ Cluster                             CreateComplete                                                                                                          6.0s
+ ⠿ YelbappserverTaskExecutionRole      CreateComplete                                                                                                         14.0s
+ ⠿ RedisserverTaskExecutionRole        CreateComplete                                                                                                         13.0s
+ ⠿ YelbnetworkNetworkIngress           CreateComplete                                                                                                          0.0s
+ ⠿ Yelbnetwork80Ingress                CreateComplete                                                                                                          1.0s
+ ⠿ LoadBalancer                        CreateComplete                                                                                                        122.5s
+ ⠿ RedisserverTaskDefinition           CreateComplete                                                                                                          4.0s
+ ⠿ YelbappserverTaskDefinition         CreateComplete                                                                                                          3.0s
+ ⠿ YelbuiTaskDefinition                CreateComplete                                                                                                          3.0s
+ ⠿ YelbdbTaskDefinition                CreateComplete                                                                                                          3.0s
+ ⠿ RedisserverServiceDiscoveryEntry    CreateComplete                                                                                                          1.1s
+ ⠿ YelbdbServiceDiscoveryEntry         CreateComplete                                                                                                          5.5s
+ ⠿ YelbuiServiceDiscoveryEntry         CreateComplete                                                                                                          4.4s
+ ⠿ YelbappserverServiceDiscoveryEntry  CreateComplete                                                                                                          4.4s
+ ⠿ RedisserverService                  CreateComplete                                                                                                         68.2s
+ ⠿ YelbdbService                       CreateComplete                                                                                                         77.7s
+ ⠿ YelbuiTCP80Listener                 CreateComplete                                                                                                          5.4s
+ ⠿ YelbappserverService                CreateComplete                                                                                                        108.5s
+ ⠿ YelbuiService                       CreateComplete                                                                                                         76.6s 
+➜ docker compose ps 
+ID                                         NAME                REPLICAS            PORTS
+docker-RedisserverService-bs6RqrSUuIux     redis-server        1/1                 
+docker-YelbappserverService-yG2xExxLjU6D   yelb-appserver      1/1                 
+docker-YelbdbService-RDGo1mRenFMt          yelb-db             1/1                 
+docker-YelbuiService-X0bPBdwZmNcC          yelb-ui             1/1 
+~~~
+
+Si observa los detalles de esta pila de redacción ( docker compose ps), verá que el yelb-uicomponente está expuesto en un puerto particular de un punto final particular. En el ejemplo anterior, cuando apunto mi navegador https://docke-LoadB-C7CWCW0SZZCC-240648981.us-east-1.elb.amazonaws.com:80veo la misma aplicación (descrita en el mismo archivo de Docker Compose) implementada en ECS y Fargate.
+
+Esta es una representación visual del flujo que hemos utilizado:
+
+<div align="center">
+<img width="700" align="vertical-align:middle" src="https://d2908q01vomqb2.cloudfront.net/fe2ef495a1152561572949784c16bf23abb28057/2020/11/18/image-79.png"></div>
+
+Esto es lo que sucedió tras bambalinas:
+
+- Tú docker compose upy Docker leen eldocker-compose.yaml
+- Docker convierte el archivo de composición original sobre la marcha en una plantilla de AWS CloudFormation
+- Docker implementa la plantilla de CloudFormation en AWS
