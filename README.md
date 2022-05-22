@@ -51,16 +51,16 @@
 
 <!-- indice de aws de docker-->
 [La ejecución de Docker en AWS]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#la-ejecuci%C3%B3n-de-docker-en-aws
-[Ejecute Docker en AWS]
-[Como usarlo en AWS] 
-[Implemente aplicaciones en Amazon ECS mediante Docker Compose] 
-[Uso de Docker Compose para ampliar las inversiones existentes]
-[Uso de Docker Compose para mejorar la experiencia del desarrollador de ECS]
-[Utilizar la consola de AWS: implemente contenedores de Docker en Amazon ECS en este simple tutorial con la consola de AWS.]
-[Crear una imagen de contenedor para usar en Amazon ECS]
-[Crear una imagen de Docker]
-[Envíe su imagen a Amazon Elastic Container Registry]
-[Limpiar]
+[Ejecute Docker en AWS]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#ejecute-docker-en-aws
+[Como usarlo en AWS]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#como-usarlo-en-aws 
+[Implemente aplicaciones en Amazon ECS mediante Docker Compose]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#implemente-aplicaciones-en-amazon-ecs-mediante-docker-compose 
+[Uso de Docker Compose para ampliar las inversiones existentes]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#uso-de-docker-compose-para-ampliar-las-inversiones-existentes
+[Uso de Docker Compose para mejorar la experiencia del desarrollador de ECS]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#uso-de-docker-compose-para-mejorar-la-experiencia-del-desarrollador-de-ecs
+[Utilizar la consola de AWS: implemente contenedores de Docker en Amazon ECS en este simple tutorial con la consola de AWS.]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#utilizar-la-consola-de-aws-implemente-contenedores-de-docker-en-amazon-ecs-en-este-simple-tutorial-con-la-consola-de-aws
+[Crear una imagen de contenedor para usar en Amazon ECS]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#crear-una-imagen-de-contenedor-para-usar-en-amazon-ecs
+[Crear una imagen de Docker]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#crear-una-imagen-de-docker
+[Envíe su imagen a Amazon Elastic Container Registry]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#env%C3%ADe-su-imagen-a-amazon-elastic-container-registry
+[Limpiar]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#limpiar
 
 <div id='id1' />
 # Primer apartado
