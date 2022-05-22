@@ -1,6 +1,6 @@
 # Docker
 
-<h1  id="contenido">Que es</h1>
+<h1>Que es</h1>
 
 Docker es un proyecto de código abierto para automatizar la implementación de aplicaciones como contenedores portátiles independientes que pueden ejecutarse en la nube o en las instalaciones. Docker también es una empresa que promueve y prueba esta tecnología, trabajando con proveedores de nube, Linux y Windows, incluido Microsoft.
 
