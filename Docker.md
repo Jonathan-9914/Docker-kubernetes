@@ -80,4 +80,11 @@ Los pasos que aparecen a continuación le ayudarán a comenzar a usar Docker en 
 
 ## Implemente aplicaciones en Amazon ECS mediante Docker Compose
 
+Docker Compose es una forma elegante pero muy simple de describir su pila de aplicaciones en contenedores. Este formato ha sido utilizado y seguirá siendo utilizado por miles de desarrolladores para ejecutar aplicaciones que requieren múltiples contenedores Docker y comunicación de servicio a servicio. A menudo, estos desarrolladores también buscan una forma conveniente de ejecutar su código en AWS.
 
+Con este espíritu en mente, AWS y Docker, comenzaron a colaborar en las especificaciones abiertas de Docker Compose para crear una ruta para que los desarrolladores utilicen el formato Docker Compose para implementar sus aplicaciones en Amazon ECS y AWS Fargate . En julio, Docker lanzó una versión beta para Docker Desktop que incorporaba estas funcionalidades y, el 15 de septiembre, Docker lanzó una experiencia actualizada en su canal estable de Docker Desktop .
+
+Con todo este trasfondo fuera del camino, ensuciémonos las manos. El resto de este blog está estructurado en torno a dos temas principales:
+
+- Uso de Docker Compose para ampliar las inversiones existentes
+- Uso de Docker Compose para mejorar la experiencia del desarrollador de ECS
