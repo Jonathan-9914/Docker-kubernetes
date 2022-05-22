@@ -25,7 +25,7 @@ constituyen una aplicación en un entorno de contenedores algunas de las caracte
 ### ㅤㅤ
 <!-- Inicia la investigacion de docker con AWS-->
 
-## **Como usarlo en AWS**
+## **La ejecución de Docker en AWS**
 
 La ejecución de Docker en AWS les ofrece a desarrolladores y administradores una manera muy confiable y económica de crear, enviar y ejecutar aplicaciones distribuidas en cualquier escala.
 
@@ -58,3 +58,9 @@ AWS proporciona soporte técnico para Docker de código abierto y para sus soluc
 <a href="https://aws.amazon.com/es/batch/"><img width="276" align="vertical-align:middle" src="src/img/servicio2.png"></a> ㅤ ㅤ ㅤ ㅤ ㅤ ㅤ
 <a href="https://aws.amazon.com/es/containers/copilot/"><img width="270" align="vertical-align:middle" src="src/img/servicio1.png"></a></div>
 </div>
+
+### ㅤㅤ
+
+## **Como usarlo en AWS**
+
+Los pasos que aparecen a continuación le ayudarán a comenzar a usar Docker en AWS  en cuestión de minutos.
