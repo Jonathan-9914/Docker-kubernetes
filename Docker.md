@@ -88,3 +88,14 @@ Con todo este trasfondo fuera del camino, ensuciémonos las manos. El resto de e
 
 - Uso de Docker Compose para ampliar las inversiones existentes
 - Uso de Docker Compose para mejorar la experiencia del desarrollador de ECS
+
+## Uso de Docker Compose para ampliar las inversiones existentes
+
+Hace cuatro años, creé una aplicación simple (pero representativa de la vida real) que podía usar como base para aprender nuevas tecnologías. En lugar de centrarme en una tecnología en abstracto y probar el tutorial que venía con ella, quería centrarme en "mi aplicación" e intentar usar la tecnología en mi contexto definido y existente. Al final del día, esto es lo que hacen los clientes reales. Su objetivo no es ejecutar el ejemplo con éxito, sino aplicar la tecnología que están evaluando a su propia pila de aplicaciones. Simplemente quería imitar los patrones de adopción de tecnologías del cliente.
+
+Entra Yelb . Yelb es una aplicación web tradicional con cuatro componentes: una interfaz de usuario, un servidor de aplicaciones, un servidor de caché y una base de datos.
+
+<div align="center">
+<img width="700" align="vertical-align:middle" src="https://d2908q01vomqb2.cloudfront.net/fe2ef495a1152561572949784c16bf23abb28057/2020/11/18/image-76.png"></div>
+
+
