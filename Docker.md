@@ -37,5 +37,13 @@ Docker colabora con AWS para ayudar a los desarrolladores a acelerar la entrega 
 AWS proporciona soporte técnico para Docker de código abierto y para sus soluciones comerciales. Existen varias maneras de ejecutar contenedores en AWS, incluido Amazon Elastic Container Service (ECS), un servicio de administración de contenedores altamente escalable y de gran desempeño. Los clientes pueden implementar de manera fácil sus aplicaciones en contenedores del entorno Docker local directamente a Amazon ECS. AWS Fargate es una tecnología para Amazon ECS que permite ejecutar contenedores en producción sin implementar o administrar infraestructura. Amazon Elastic Container Service for Kubernetes (EKS) facilita la ejecución de Kubernetes en AWS. AWS Fargate es una tecnología para Amazon ECS que le permite ejecutar contenedores sin aprovisionar ni administrar servidores. Amazon Elastic Container Registry (ECR) es un repositorio de contenedores privado seguro y altamente disponible que facilita el almacenamiento y la administración de imágenes de contenedores de Docker, así como el cifrado y la compresión de imágenes en reposo de manera que se puedan extraer de manera rápida y segura. AWS Batch le permite ejecutar cargas de trabajo de procesamiento por lotes altamente escalables con contenedores de Docker.
 
 
+<div align="left">
+<a href="https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md"><img width="250" align="vertical-align:middle" src="https://1000marcas.net/wp-content/uploads/2021/05/Docker-Logo-2013.png" alt="Docker"></a>
+<p width="250">Amazon ECS es un servicio de organización de contenedores altamente escalable y de gran desempeño para ejecutar contenedores de Docker en la nube de AWS.</p></div>
+  
+<div align="right">  
+<a href="https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md"><img width="200" align="vertical-align:middle" src="/src/img/kubernetes.png" alt="Kubernetes"></a></div>
+
+
 
 
