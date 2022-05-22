@@ -356,3 +356,77 @@ Esta es una representación visual de lo que hemos logrado:
 
 <div align="center">
 <img width="700" align="vertical-align:middle" src="https://d2908q01vomqb2.cloudfront.net/fe2ef495a1152561572949784c16bf23abb28057/2020/11/18/image-81.png"></div>
+
+## [<p align = "center">Utilizar la consola de AWS: implemente contenedores de Docker en Amazon ECS en este simple tutorial con la consola de AWS.</p>](https://aws.amazon.com/es/getting-started/hands-on/deploy-docker-containers/)
+
+## Crear una imagen de contenedor para usar en Amazon ECS
+
+Amazon ECS utiliza imágenes de Docker en definiciones de tareas para lanzar contenedores. Docker es una tecnología que proporciona las herramientas necesarias para crear, ejecutar, probar e implementar aplicaciones distribuidas en contenedores. Docker proporciona un tutorial sobre la implementación de contenedores en Amazon ECS. Para obtener más información, consulte Implementación de contenedores Docker en Amazon ECS.
+
+El propósito de los pasos descritos aquí es guiarlo en la creación de su primera imagen de Docker y enviar esa imagen a Amazon ECR, que es un registro de contenedor, para usarla en sus definiciones de tareas de Amazon ECS. Este tutorial asume que posee una comprensión básica de qué es Docker y cómo funciona. Para obtener más información sobre Docker, consulte ¿Qué es Docker?y la descripción general de Docker.
+
+**Importante**
+
+AWS y Docker han colaborado para crear una experiencia de desarrollador simplificada que le permita implementar y administrar contenedores en Amazon ECS directamente con las herramientas de Docker. Ahora puede crear y probar sus contenedores localmente con Docker Desktop y Docker Compose y luego implementarlos en Amazon ECS en Fargate. Para comenzar con la integración de Amazon ECS y Docker, descargue Docker Desktop y, opcionalmente, regístrese para obtener una ID de Docker. Para obtener más información, consulte Docker Desktopy registro de ID de Docker.
+
+#### requisitos previos
+Antes de comenzar, asegúrese de que se cumplan los siguientes requisitos previos.
+
+- Asegúrese de haber completado los pasos de configuración de Amazon ECR. Para obtener más información, consulte Configuración de Amazon ECR en la Guía del usuario de Amazon Elastic Container Registry .
+
+- Su usuario tiene los permisos de IAM necesarios para acceder y utilizar el servicio Amazon ECR. Para obtener más información, consulte Políticas administradas de Amazon ECR .
+
+- Tienes Docker instalado. Para conocer los pasos de instalación de Docker para Amazon Linux 2, consulte Instalación de Docker en Amazon Linux 2 . Para todos los demás sistemas operativos, consulte la documentación de Docker en la descripción general de Docker Desktop.
+
+- Tiene la CLI de AWS instalada y configurada. Para obtener más información, consulte Instalación de la interfaz de línea de comandos de AWS en la Guía del usuario de la interfaz de línea de comandos de AWS .
+
+Si no tiene o necesita un entorno de desarrollo local y prefiere usar una instancia de Amazon EC2 para usar Docker, proporcionamos los siguientes pasos para lanzar una instancia de Amazon EC2 usando Amazon Linux 2 e instalar Docker Engine y la CLI de Docker.
+
+## Crear una imagen de Docker
+
+Las definiciones de tareas de Amazon ECS utilizan imágenes de Docker para lanzar contenedores en las instancias de contenedores de sus clústeres. En esta sección, creará una imagen de Docker de una aplicación web simple y la probará en su sistema local o instancia de Amazon EC2, y luego enviará la imagen al registro de contenedores de Amazon ECR para que pueda usarla en una definición de tareas de Amazon ECS.
+
+***Para crear una imagen Docker de una aplicación web simple***
+
+1. Crea un archivo llamado Dockerfile. Un Dockerfile es un manifiesto que describe la imagen base que se usará para su imagen de Docker y lo que desea instalar y ejecutar en ella. Para obtener más información sobre Dockerfiles, vaya a la Referencia de Dockerfile.
+
+~~~
+touch Dockerfile
+~~~
+
+2. Edite el Dockerfileque acaba de crear y agregue el siguiente contenido.
+
+~~~
+FROM ubuntu:18.04
+
+# Install dependencies
+RUN apt-get update && \
+ apt-get -y install apache2
+
+# Install apache and write hello world message
+RUN echo 'Hello World!' > /var/www/html/index.html
+
+# Configure apache
+RUN echo '. /etc/apache2/envvars' > /root/run_apache.sh && \
+ echo 'mkdir -p /var/run/apache2' >> /root/run_apache.sh && \
+ echo 'mkdir -p /var/lock/apache2' >> /root/run_apache.sh && \ 
+ echo '/usr/sbin/apache2 -D FOREGROUND' >> /root/run_apache.sh && \ 
+ chmod 755 /root/run_apache.sh
+
+EXPOSE 80
+
+CMD /root/run_apache.sh
+~~~
+
+Este Dockerfile usa la imagen de Ubuntu 18.04. Las RUNinstrucciones actualizan los cachés de paquetes, instalan algunos paquetes de software para el servidor web y luego escriben "¡Hola mundo!" contenido a la raíz del documento del servidor web. La EXPOSEinstrucción expone el puerto 80 en el contenedor y la CMDinstrucción inicia el servidor web.
+
+3. Cree la imagen de Docker desde su Dockerfile.
+
+**Nota**
+Algunas versiones de Docker pueden requerir la ruta completa a su Dockerfile en el siguiente comando, en lugar de la ruta relativa que se muestra a continuación.
+
+~~~
+docker build -t hello-world .
+~~~
+4. Ejecute Docker Images para verificar que la imagen se creó correctamente.
+
