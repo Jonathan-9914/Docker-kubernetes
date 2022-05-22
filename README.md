@@ -74,7 +74,13 @@
 <a href="https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#Kubernetes"><img width="200" align="vertical-align:middle" src="/src/img/kubernetes.png" alt="Kubernetes"></a></div>
 </div>
 
+### ㅤ
+---
+### ㅤ
 
+# ***<p align = "center">Bibliografía</p>***
+
+***<p align = "center">Toda la investigación de aws referente a docker fueron extraidas de (https://aws.amazon.com/es/docker/) </p>***
 
 
 
