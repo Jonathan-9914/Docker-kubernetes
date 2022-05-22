@@ -232,3 +232,127 @@ Esto es lo que sucedió tras bambalinas:
 - Tú docker compose upy Docker leen eldocker-compose.yaml
 - Docker convierte el archivo de composición original sobre la marcha en una plantilla de AWS CloudFormation
 - Docker implementa la plantilla de CloudFormation en AWS
+
+## Uso de Docker Compose para mejorar la experiencia del desarrollador de ECS
+Hasta ahora nos hemos centrado en cómo podría reutilizar un archivo Docker Compose de 4 años . Ahora veamos cómo esta integración puede mejorar la experiencia para implementaciones futuras .
+
+La integración de Docker Compose con Amazon ECS puede mejorar la experiencia del desarrollador en al menos un par de dimensiones: escribir menos YAML y poder probar su aplicación localmente (mientras se conecta a los servicios en la nube).
+
+La mejor forma de explicar esto es centrándonos en otro ejemplo. Imagine que necesita implementar una aplicación que utiliza la siguiente arquitectura:
+<div align="center">
+<img width="700" align="vertical-align:middle" src="https://d2908q01vomqb2.cloudfront.net/fe2ef495a1152561572949784c16bf23abb28057/2020/11/18/image-80.png"></div>
+
+La aplicación (que se ejecuta en la tarea de ECS) lee mensajes de una cola de SQS y procesa archivos en dos carpetas de un volumen de EFS.
+
+Configurar esta arquitectura en AWS requiere hacer lo siguiente:
+
+crear una VPC dedicada
+crear un volumen EFS
+crear un clúster de ECS
+crear una política y un rol de IAM para leer mensajes de SQS y colocar registros en CloudWatch
+crear una definición de tarea de ECS (con el montaje de EFS y el rol de IAM adecuado)
+crear un servicio ECS
+inyectando un cierto número de variables de entorno
+Si tuviera que codificar los detalles de la infraestructura anterior con CloudFormation, fácilmente necesitaría escribir unos cientos de líneas de YAML.
+
+Si usara Docker Compose para definir esta aplicación, sería tan simple como escribir estas 20 líneas:
+
+~~~
+services:
+  ecsworker-in-region:
+    environment: 
+        - SQS_QUEUE_URL=https://sqs.us-east-1.amazonaws.com/123456789/main-queue
+        - EFS_SOURCE_FOLDER=/data/sourcefolder/             
+        - EFS_DESTINATION_FOLDER=/data/destinationfolder/              
+        - AWS_REGION=us-east-1
+    image: 123456789.dkr.ecr.us-east-1.amazonaws.com/ecsworker:amd64-slim 
+    volumes:
+        - efs-share:/data
+    x-aws-role:
+        Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Action: sqs:*
+          Resource: arn:aws:sqs:us-east-1:123456789:main-queue
+volumes:
+  efs-share:
+~~~
+
+Si tiene curiosidad acerca de la naturaleza de estas x-awsextensiones de Docker Compose, consulte la última sección de este blog. En pocas palabras, x-aws-rolepermite al desarrollador asignar una política de IAM en línea que se vinculará a la aplicación (como un rol de tarea de ECS).
+
+Si bien nuestro contexto de Docker aún apunta a nuestro punto de enlace de AWS ( myecscontext), implementaremos esta aplicación en AWS:
+
+~~~
+➜  docker compose up 
+[+] Running 19/19
+ ⠿ composelocal                            CreateComplete                                                                                                                                  193.5s
+ ⠿ CloudMap                                CreateComplete                                                                                                                                   48.6s
+ ⠿ EfsshareFilesystem                      CreateComplete                                                                                                                                    9.5s
+ ⠿ LogGroup                                CreateComplete                                                                                                                                    3.7s
+ ⠿ Cluster                                 CreateComplete                                                                                                                                    9.5s
+ ⠿ DefaultNetwork                          CreateComplete                                                                                                                                    8.0s
+ ⠿ EcsworkerinregionTaskExecutionRole      CreateComplete                                                                                                                                   14.5s
+ ⠿ DefaultNetworkIngress                   CreateComplete                                                                                                                                    0.0s
+ ⠿ EfsshareNFSMountTargetOnSubnetbd150891  CreateComplete                                                                                                                                   93.9s
+ ⠿ EfsshareAccessPoint                     CreateComplete                                                                                                                                   18.2s
+ ⠿ EfsshareNFSMountTargetOnSubnetc4f32f8f  CreateComplete                                                                                                                                   93.9s
+ ⠿ EfsshareNFSMountTargetOnSubnet7fe9c173  CreateComplete                                                                                                                                   93.9s
+ ⠿ EfsshareNFSMountTargetOnSubnet6301dc5c  CreateComplete                                                                                                                                   93.9s
+ ⠿ EfsshareNFSMountTargetOnSubnetd56c7a8f  CreateComplete                                                                                                                                   93.9s
+ ⠿ EfsshareNFSMountTargetOnSubnetc82799ac  CreateComplete                                                                                                                                   96.5s
+ ⠿ EcsworkerinregionTaskRole               CreateComplete                                                                                                                                   15.0s
+ ⠿ EcsworkerinregionTaskDefinition         CreateComplete                                                                                                                                    3.0s
+ ⠿ EcsworkerinregionServiceDiscoveryEntry  CreateComplete                                                                                                                                    2.3s
+ ⠿ EcsworkerinregionService                CreateComplete    
+~~~
+La aplicación ahora se ejecuta en AWS y lo único que tuve que hacer para implementarla fue escribir 20 líneas de YAML.
+
+Sin embargo, sobre el tema de mejorar la experiencia del desarrollador, como ingeniero, también puede preguntarse cómo iterar rápidamente en esta aplicación en su estación de trabajo sin tener que implementarla necesariamente en la nube, mientras experimenta con cambios rápidos de código. La belleza de esta integración es que asigna construcciones estándar de Docker a construcciones de AWS. Tomemos la volumedeclaración, por ejemplo. Cuando se usa contra el punto final de Docker local (el defaultcontexto de Docker), volumese crea un Docker local tradicional. Sin embargo, cuando se usa con el contexto de AWS, el objeto de volumen Docker se asigna a un objeto EFS y, por lo tanto, se crea un volumen EFS.
+
+En teoría, podríamos simplemente cambiar el contexto de Docker defaulty apuntar al tiempo de ejecución local de Docker. Si bien el archivo Compose seguiría siendo semánticamente correcto, si lo hiciéramos, no tendríamos acceso a los servicios de AWS con los que necesitamos interactuar para probar mi aplicación (es decir, SQS en mi ejemplo anterior). Esto se debe a que mi aplicación no estaría autorizada para leer de la cola de SQS, por ejemplo.
+
+Es por eso que hemos introducido un contexto adicional de Docker que puede habilitar con la bandera `--local-simulation. Puedes crear un contexto como este:
+
+~~~
+➜ docker context create ecs --local-simulation ecsLocal
+Successfully created ecs-local context "ecsLocal"
+➜ docker context use ecsLocal                          
+ecsLocal
+➜ docker context ls                                    
+NAME                TYPE                DESCRIPTION                               DOCKER ENDPOINT               KUBERNETES ENDPOINT   ORCHESTRATOR
+default             moby                Current DOCKER_HOST based configuration   unix:///var/run/docker.sock                         swarm
+ecsLocal *          ecs-local           ECS local endpoints 
+~~~
+
+El contexto de Docker ecsLocalse comporta de manera similar al defaultcontexto de Docker local, pero incrustará automáticamente los extremos del contenedor local de ECS . Este es un contenedor que simula los servicios de metadatos de la instancia, incluidas las credenciales de AWS IAM que obtiene del archivo $HOME/.aws/credentials file. En la nube, la venta de las credenciales de IAM ocurre al adjuntar un rol de IAM a la tarea de ECS. Localmente, esta función es simulada por los extremos del contenedor local de ECS y permite que la aplicación funcione de manera transparente.
+
+Lo siguiente que debe hacer es docker loginextraer la imagen de ECR. Puedes hacerlo usando este comando:
+
+~~~
+echo $(aws ecr get-login-password --region us-east-1) | docker login --password-stdin --username AWS 123456789.dkr.ecr.us-east-1.amazonaws.com/ecsworker
+~~~
+
+En este punto, puede iniciar localmente la aplicación utilizando el contexto docker compose upde Docker recién creado :ecsLocal
+
+~~~
+➜ docker compose up
+Starting composelocal_ecs-local-endpoints_1 ... done
+Starting composelocal_ecsworker-in-region_1 ... done
+Attaching to composelocal_ecs-local-endpoints_1, composelocal_ecsworker-in-region_1
+ecs-local-endpoints_1 | time="2020-11-16T15:49:02Z" level=info msg="ecs-local-container-endpoints 1.3.0 (4fa3c29) ECS Agent 1.27.0 compatible"
+ecs-local-endpoints_1 | time="2020-11-16T15:49:02Z" level=info msg=Running...
+ecsworker-in-region_1 | Importing the env variables
+ecsworker-in-region_1 | Env variables have been imported
+ecsworker-in-region_1 | Initializing the boto client
+ecsworker-in-region_1 | Boto client has been initialized
+ecsworker-in-region_1 | Entering the infinite queue monitoring loop
+~~~
+
+Tenga en cuenta que los registros de la aplicación están disponibles en la stdoutconsola local en lugar de Cloudwatch (que es lo que sucede cuando implementa en AWS). Observe también cómo el botocliente (AWS SDK para Python) se ha inicializado correctamente en la conexión a la cola de SQS aprovechando las credenciales locales a través del contenedor de metadatos (los puntos finales del contenedor local de ECS).
+
+Tenga en cuenta también que encontramos un pequeño error de última hora que provocó que este ejemplo no funcionara correctamente con el contexto ecsLocal al usar Docker Desktop 2.5.0.1. El problema se describe aquí y el PR para resolverlo ya se ha fusionado . La próxima versión de Docker Desktop incluirá esta solución. Para evitar el error, simplemente elimine por completo la sección `x-aws-role` en el YAML anterior cuando se ejecuta en el contexto ecsLocal.
+
+Esta es una representación visual de lo que hemos logrado:
+
+<div align="center">
+<img width="700" align="vertical-align:middle" src="https://d2908q01vomqb2.cloudfront.net/fe2ef495a1152561572949784c16bf23abb28057/2020/11/18/image-81.png"></div>
