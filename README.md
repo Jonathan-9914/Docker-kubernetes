@@ -12,7 +12,7 @@
 ### ㅤㅤ
 **<p align = "center">Mayo 2022</p>**
 **<p align = "center">Uniminuto</p>**
-**<p align = "center">Desarrollo Basad En Plataformas</p>**
+**<p align = "center">Desarrollo Basado En Plataformas</p>**
 ### ㅤㅤ
 ### ㅤ
 ---
