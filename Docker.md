@@ -95,14 +95,14 @@ algunas de las características principales son portabilidad ligereza autosufici
 <img width="250" align="vertical-align:middle" src="src/img/espacio.PNG" alt="Docker"></a></div>
 </div>
 
-## **Daemon de Docker**
+## Daemon de Docker
 
 
 
-## **La APIREST**
+## La APIREST
 
 
-## **La terminal**
+## La terminal
 
 
 
