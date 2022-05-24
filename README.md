@@ -44,7 +44,7 @@
           - [Que necesito](#id1)
  
 [Docker]: https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md
-[que es]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#text
+[Que es Docker]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#que-es-docker
 [Como se compone]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#contenido
 
 <!-- indice de aws de docker-->
