@@ -14,7 +14,7 @@ Los contenedores de Docker pueden ejecutarse en cualquier lugar, localmente en u
 
 
 
-<h1  id="contenido">como se compone</h1>
+<h1  id="contenido">Como Se Compone</h1>
 Docker es de codigo abierto facilita el proceso de creación y diseño de contenedores el envío de imágenes y creación de versiones de imagen de los contenedores se usan como máquinas virtuales pero a diferencia de las máquinas virtuales suelen utilizarse para levantar máquinas independientes. con sistemas operativos muy ligeros lo 
 que permite crear implementar copiar y mover los contenedores de un entorno a otro dado que los contenedores requieren mucho menos recursos se inician rápidamente y son fáciles de implementar con mayor densidad.
 
@@ -95,7 +95,14 @@ algunas de las características principales son portabilidad ligereza autosufici
 <img width="250" align="vertical-align:middle" src="src/img/espacio.PNG" alt="Docker"></a></div>
 </div>
 
+## **Daemon de Docker**
 
+
+
+## **La APIREST**
+
+
+## **La terminal**
 
 
 
