@@ -63,7 +63,12 @@ Los siguientes controladores dependen de alguna forma de un proveedor de la nube
 ## Componentes De Nodo
 Los componentes de nodo corren en cada nodo, manteniendo a los pods en funcionamiento y proporcionando el entorno de ejecución de Kubernetes
 
-### kubelet
+## kubelet
+Agente que se ejecuta en cada nodo de un clúster. Se asegura de que los contenedores estén corriendo en un pod.
+
+El agente kubelet toma un conjunto de especificaciones de Pod, llamados PodSpecs, que han sido creados por Kubernetes y garantiza que los contenedores descritos en ellos estén funcionando y en buen estado.
+
+### kube proxy 
 kube-proxy permite abstraer un servicio en Kubernetes manteniendo las reglas de red en el anfitrión y haciendo reenvío de conexiones
 
 ### Runtime De Contenedores
