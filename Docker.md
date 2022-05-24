@@ -96,13 +96,15 @@ algunas de las características principales son portabilidad ligereza autosufici
 </div>
 
 ## Daemon de Docker
-
+El motor de Docker se utiliza un proceso daemon como servidor que funciona en un segundo plano del sistema host y permite el control central del motor de Docker. Además se encarga de crear y administrar todas las imágenes, contenedores o redes.
 
 
 ## La APIREST
+Especifica una serie de interfaces que permite a otros programas interactuar con el daemon y darle instrucciones. Uno de estos programas es la terminal del sistema operativo.
 
 
 ## La terminal
+Docker utiliza la terminal del sistema operativo como programa cliente, el cual interacciona con el daemon a través de la API REST y permite a los usuarios controlarlo a través de scripts o comandos.
 
 
 
