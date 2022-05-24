@@ -40,6 +40,22 @@
 3. [kubernetes](#id2)
       - [Que es Kubernetes]
       - [Como se compone Kubernetes]
+        - [kube-apiserver]
+        - - [etcd]
+        - - [kube-scheduler]
+        - - [kube-controller-manager]
+        - - [cloud-controller-manager]
+      - [Como se componentes de Nodo]
+         - [kubelet]
+         - [kube-proxy]
+         - [Runtime de contenedores]
+         - [Addons]
+          - [DNS]
+          - [Interfaz Web (Dashboard)]
+          - [Monitor de recursos de contenedores]
+          - [Registros del clúster]
+
+
       - [Ejecución de Kubernetes en AWS]
           - [Que necesito](#id1)
  
