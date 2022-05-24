@@ -1,6 +1,6 @@
 # Docker
 
-<h2  id="contenido">Que es</h2>
+## Que es Docker
 
 Docker es un proyecto de código abierto para automatizar la implementación de aplicaciones como contenedores portátiles independientes que pueden ejecutarse en la nube o en las instalaciones. Docker también es una empresa que promueve y prueba esta tecnología, trabajando con proveedores de nube, Linux y Windows, incluido Microsoft.
 
@@ -12,14 +12,17 @@ Docker es un proyecto de código abierto para automatizar la implementación de 
 Los contenedores de Docker pueden ejecutarse en cualquier lugar, localmente en un centro de datos del cliente, en un proveedor de servicios de terceros o en la nube de Azure. Los contenedores de imágenes de Docker pueden ejecutarse de forma nativa en Linux y Windows. Sin embargo, las imágenes de Windows solo pueden ejecutarse en hosts de Windows, y las imágenes de Linux solo pueden ejecutarse en hosts de Linux y hosts de Windows (aún con máquinas virtuales Linux Hyper-V), donde el host es el servidor o la máquina virtual.
 
 
-<h1  id="text">prueba1</h1> 
-
-Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
 
 
 <h1  id="contenido">como se compone</h1>
 Docker es de codigo abierto facilita el proceso de creación y diseño de contenedores el envío de imágenes y creación de versiones de imagen de los contenedores se usan como máquinas virtuales pero a diferencia de las máquinas virtuales suelen utilizarse para levantar máquinas independientes. con sistemas operativos muy ligeros lo 
 que permite crear implementar copiar y mover los contenedores de un entorno a otro dado que los contenedores requieren mucho menos recursos se inician rápidamente y son fáciles de implementar con mayor densidad.
+
+
+<div align="center">
+<img width="300" align="vertical-align:middle" src="src/img/contenedor docker.png"></div>"></div>"></div>
+
+
 lo que significa que se puede ejecutar más servicios en la misma unidad de hardware reduciendo así los costos lo que es un punto para contenedores y trabaja con imágenes que son plantillas de sólo lectura, que definen su contenedor la imagen contiene el código que se ejecutará incluido
 cualquier definición para cualquier biblioteca o dependencia que el código necesite realmente un contenedor de docker es una imagen de docker instancia da o en ejecución o que permite entregar código con mayor rapidez estandarizar las operaciones de las aplicaciones y transferir el código con facilidad lo que tiene una sintaxis sencilla y simple que aporta un control absoluto a todo la tecnología docker usa el kernel de linux y las funciones de éste pueden ejecutarse de manera independiente ofrecen un modelo de implementación basado en imágenes automatiza la implementación de las aplicaciones o conjuntos combinados de procesos que
 constituyen una aplicación en un entorno de contenedores algunas de las características principales son portabilidad ligereza autosuficiencia y entre sus ventajas se pueden sonar las higueras se tienen consistencia de versiones reduce el tiempo las actualizaciones y despliegue de las aplicaciones ocupa menos espacio en disco de igual forma se pueden mencionar la curva de aprendizaje que puede ser algo complicado y exigente en un principio y si quieres empezar con
