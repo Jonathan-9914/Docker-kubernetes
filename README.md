@@ -22,7 +22,9 @@
 1. [Docker] 
       - [Que es Docker]
       - [Como se compone] bibiana
-         - [Que necesito](#id1)
+         - [Daemon de Docker](#id1)
+         - [La APIREST](#id2)
+         - [La terminal](#id3)
       - [La ejecución de Docker en AWS]
          - [Ejecute Docker en AWS]
          - [Como usarlo en AWS] 
