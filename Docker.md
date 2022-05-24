@@ -5,6 +5,10 @@
 Docker es un proyecto de código abierto para automatizar la implementación de aplicaciones como contenedores portátiles independientes que pueden ejecutarse en la nube o en las instalaciones. Docker también es una empresa que promueve y prueba esta tecnología, trabajando con proveedores de nube, Linux y Windows, incluido Microsoft.
 
 
+<div align="center">
+<img width="600" align="vertical-align:middle" src="src/img/docker-contenedores.jpg"></div>
+
+
 Los contenedores de Docker pueden ejecutarse en cualquier lugar, localmente en un centro de datos del cliente, en un proveedor de servicios de terceros o en la nube de Azure. Los contenedores de imágenes de Docker pueden ejecutarse de forma nativa en Linux y Windows. Sin embargo, las imágenes de Windows solo pueden ejecutarse en hosts de Windows, y las imágenes de Linux solo pueden ejecutarse en hosts de Linux y hosts de Windows (aún con máquinas virtuales Linux Hyper-V), donde el host es el servidor o la máquina virtual.
 
 
