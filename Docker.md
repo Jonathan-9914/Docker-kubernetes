@@ -86,16 +86,13 @@ algunas de las características principales son portabilidad ligereza autosufici
 
  entre sus ventajas se pueden sonar las higueras se tienen consistencia de versiones reduce el tiempo las actualizaciones y despliegue de las aplicaciones ocupa menos espacio en disco de igual forma se pueden mencionar la curva de aprendizaje.
  
+ ###
  
-  <div align="center">
-<img width="260" align="vertical-align:middle" src="src/img/version.PNG"></div>
-
 <div align="center" style="vertical-align:center" >
 <div align="" style="vertical-align:center">
-  <img width="260" align="vertical-align:middle" src="src/img/version.PNG"></div>
-<img width="270" align="vertical-align:middle" src="src/img/tiempo.PNG" alt="Docker"></a>  ㅤ ㅤ ㅤ ㅤ ㅤ
-<img width="270" align="vertical-align:middle" src="src/img/espacio.PNG" alt="Docker"></a></div>
-<img width="270" align="vertical-align:middle" src="src/img/Curva de aprendizaje.PNG" alt="Docker"></a></div>
+<img width="250" align="vertical-align:middle" src="src/img/version.PNG"></div>
+<img width="250" align="vertical-align:middle" src="src/img/tiempo.PNG" alt="Docker"></a>  ㅤ ㅤ ㅤ ㅤ ㅤ
+<img width="250" align="vertical-align:middle" src="src/img/espacio.PNG" alt="Docker"></a></div>
 </div>
 
 
