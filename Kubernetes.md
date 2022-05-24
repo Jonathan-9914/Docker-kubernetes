@@ -141,7 +141,10 @@ Eso sí, antes de continuar, debemos asegurarnos de haber instalado las herramie
 
 ##
 
-<div align="center" style="vertical-align:center" >
-<div align="" style="vertical-align:center">
+<div align="center">
 <a href="https://aws.amazon.com/es/vpc/?vpc-blogs.sort-by=item.additionalFields.createdDate&vpc-blogs.sort-order=desc"><img width="180" align="vertical-align:middle" src="src/img/VPC.png"></a></div>
+
+##
+
+Configurando AWS CLI con las credenciales de usuario ejecutando:
 
