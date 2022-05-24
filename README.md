@@ -21,7 +21,7 @@
 # **Índice**
 1. [Docker] 
       - [Que es Docker]
-      - [Como se compone] bibiana
+      - [Como se compone]
          - [Daemon de Docker]
          - [La APIREST]
          - [La terminal]
