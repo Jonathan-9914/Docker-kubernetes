@@ -40,7 +40,7 @@
 3. [kubernetes](#id2)
       - [Que es Kubernetes]
       - [Como se compone](#id1)  bibiana
-      - [Como usarlo en AWS](#id1) paola
+      - [Ejecución de Kubernetes en AWS]
           - [Que necesito](#id1)
  
 [Docker]: https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md
@@ -63,6 +63,10 @@
 
 <!-- indice kubernetes-->
 [Que es Kubernetes]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#que-es-kubernetes
+
+<!-- indice de aws de Kubernetes-->
+[Ejecución de Kubernetes en AWS]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#ejecuci%C3%B3n-de-kubernetes-en-aws
+
 
 ### ㅤ
 ---
