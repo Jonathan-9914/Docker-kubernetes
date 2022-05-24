@@ -46,6 +46,9 @@
 [Docker]: https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md
 [Que es Docker]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#que-es-docker
 [Como se compone]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#contenido
+[Daemon de Docker]:https://github.com/Jonathan-9914/Docker-kubernetes/edit/main/Docker.md#daemon-de-docker
+[La APIREST]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#la-apirest
+[La terminal]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#la-terminal
 
 <!-- indice de aws de docker-->
 [La ejecución de Docker en AWS]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#la-ejecuci%C3%B3n-de-docker-en-aws
