@@ -35,6 +35,13 @@ Si tu clúster utiliza etcd como sistema de almacenamiento, échale un vistazo a
 Puedes encontrar información detallada sobre etcd en su documentación oficial.
 
 ### kube-scheduler
+Componente del plano de control que está pendiente de los Pods que no tienen ningún nodo asignado y seleciona uno donde ejecutarlo.
+
+Para decidir en qué nodo se ejecutará el pod, se tienen en cuenta diversos factores: requisitos de recursos, restricciones de hardware/software/políticas, afinidad y anti-afinidad, localización de datos dependientes, entre otros.
+
+
+### kube-controller-manager
+
 Componente del plano de control que ejecuta los controladores de Kubernetes.
 
 Lógicamente cada controlador es un proceso independiente, pero para reducir la complejidad, todos se compilan en un único binario y se ejecuta en un mismo proceso.
