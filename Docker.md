@@ -19,8 +19,17 @@ Docker es de codigo abierto facilita el proceso de creación y diseño de conten
 que permite crear implementar copiar y mover los contenedores de un entorno a otro dado que los contenedores requieren mucho menos recursos se inician rápidamente y son fáciles de implementar con mayor densidad.
 
 
+###
+
+
 <div align="center">
-<img width="300" align="vertical-align:middle" src="src/img/contenedor docker.png"></div>"></div>"></div>
+<img width="300" align="vertical-align:middle" src="src/img/contenedor docker.png"></div>
+
+<div align="center" style="vertical-align:center" >
+<div align="" style="vertical-align:center">
+<img width="270" align="vertical-align:middle" src="src/img/docker entorno.PNG" alt="Docker"></a>  ㅤ ㅤ ㅤ ㅤ ㅤ
+<img width="270" align="vertical-align:middle" src="src/img/contenedor con menos recursos.PNG" alt="Docker"></a></div>
+</div>
 
 
 lo que significa que se puede ejecutar más servicios en la misma unidad de hardware reduciendo así los costos lo que es un punto para contenedores y trabaja con imágenes que son plantillas de sólo lectura, que definen su contenedor la imagen contiene el código que se ejecutará incluido
