@@ -20,7 +20,7 @@ que permite crear implementar copiar y mover los contenedores de un entorno a ot
 
 
 <div align="center">
-<img width="600" align="vertical-align:middle" src="src/img/docker-contenedores.jpg"></div>"></div>
+<img width="300" align="vertical-align:middle" src="src/img/contenedor docker.png"></div>"></div>"></div>
 
 
 lo que significa que se puede ejecutar más servicios en la misma unidad de hardware reduciendo así los costos lo que es un punto para contenedores y trabaja con imágenes que son plantillas de sólo lectura, que definen su contenedor la imagen contiene el código que se ejecutará incluido
