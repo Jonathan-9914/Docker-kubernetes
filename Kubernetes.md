@@ -55,10 +55,10 @@ cloud-controller-manager permite que el código de Kubernetes y el del proveedor
 
 Los siguientes controladores dependen de alguna forma de un proveedor de la nube:
 
--Controlador de nodos: es el responsable de detectar y actuar cuándo un nodo deja de responder
--Controlador de rutas: para configurar rutas en la infraestructura de nube subyacente
--Controlador de servicios: para crear, actualizar y eliminar balanceadores de carga en la nube
--Controlador de volúmenes: para crear, conectar y montar volúmenes e interactuar con el proveedor de la nube para orquestarlos.
+- Controlador de nodos: es el responsable de detectar y actuar cuándo un nodo deja de responder
+- Controlador de rutas: para configurar rutas en la infraestructura de nube subyacente
+- Controlador de servicios: para crear, actualizar y eliminar balanceadores de carga en la nube
+- Controlador de volúmenes: para crear, conectar y montar volúmenes e interactuar con el proveedor de la nube para orquestarlos.
 
 ## Componentes De Nodo
 Los componentes de nodo corren en cada nodo, manteniendo a los pods en funcionamiento y proporcionando el entorno de ejecución de Kubernetes
