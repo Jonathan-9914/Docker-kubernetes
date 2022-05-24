@@ -63,12 +63,7 @@ Los siguientes controladores dependen de alguna forma de un proveedor de la nube
 ## Componentes De Nodo
 Los componentes de nodo corren en cada nodo, manteniendo a los pods en funcionamiento y proporcionando el entorno de ejecución de Kubernetes
 
-## kubelet
-Agente que se ejecuta en cada nodo de un clúster. Se asegura de que los contenedores estén corriendo en un pod.
-
-El agente kubelet toma un conjunto de especificaciones de Pod, llamados PodSpecs, que han sido creados por Kubernetes y garantiza que los contenedores descritos en ellos estén funcionando y en buen estado.
-
-### kube proxy 
+### kubelet
 kube-proxy permite abstraer un servicio en Kubernetes manteniendo las reglas de red en el anfitrión y haciendo reenvío de conexiones
 
 ### Runtime De Contenedores
@@ -114,6 +109,10 @@ Es posible usar Kubernetes en AWS de dos maneras principales: ejecutarlo por su 
 
 <div align="center">
 <img width="800" align="vertical-align:middle" src="src/img/kuber-3.PNG"></div>
+
+## Implementación de Kubernetes en AWS con Kops
+
+Kops es una herramienta útil para instalar, actualizar y operar clústeres de Kubernetes de alta disponibilidad en AWS y otras plataformas en la nube mediante la línea de comandos. Kops también puede generar plantillas que podemos usar en Terraform y admite varios complementos personalizados de Kubernetes.
 
 ### Requisitos Previos 
 
