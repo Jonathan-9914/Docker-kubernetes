@@ -57,8 +57,47 @@ la imagen contiene el código que se ejecutará incluido cualquier definición p
 </div>
 
 
-lo que tiene una sintaxis sencilla y simple que aporta un control absoluto a todo la tecnología docker usa el kernel de linux y las funciones de éste pueden ejecutarse de manera independiente ofrecen un modelo de implementación basado en imágenes automatiza la implementación de las aplicaciones o conjuntos combinados de procesos que
-constituyen una aplicación en un entorno de contenedores algunas de las características principales son portabilidad ligereza autosuficiencia y entre sus ventajas se pueden sonar las higueras se tienen consistencia de versiones reduce el tiempo las actualizaciones y despliegue de las aplicaciones ocupa menos espacio en disco de igual forma se pueden mencionar la curva de aprendizaje que puede ser algo complicado y exigente en un principio y si quieres empezar con
+lo que tiene una sintaxis sencilla y simple que aporta un control absoluto a todo la tecnología docker usa el kernel de linux y las funciones de éste pueden ejecutarse de manera independiente ofrecen un modelo de implementación basado en imágenes.
+
+
+
+
+
+###
+###
+ <div align="center">
+<img width="260" align="vertical-align:middle" src="src/img/automatizar.PNG"></div>
+
+ 
+automatiza la implementación de las aplicaciones o conjuntos combinados de procesos que constituyen una aplicación en un entorno de contenedores.
+
+###
+
+ <div align="center">
+<img width="260" align="vertical-align:middle" src="src/img/entorno.PNG"></div>
+
+
+algunas de las características principales son portabilidad ligereza autosuficiencia
+
+###
+
+ <div align="center">
+<img width="260" align="vertical-align:middle" src="src/img/Caracteristcas.PNG"></div>
+
+ entre sus ventajas se pueden sonar las higueras se tienen consistencia de versiones reduce el tiempo las actualizaciones y despliegue de las aplicaciones ocupa menos espacio en disco de igual forma se pueden mencionar la curva de aprendizaje.
+ 
+ 
+  <div align="center">
+<img width="260" align="vertical-align:middle" src="src/img/version.PNG"></div>
+
+<div align="center" style="vertical-align:center" >
+<div align="" style="vertical-align:center">
+  <img width="260" align="vertical-align:middle" src="src/img/version.PNG"></div>
+<img width="270" align="vertical-align:middle" src="src/img/tiempo.PNG" alt="Docker"></a>  ㅤ ㅤ ㅤ ㅤ ㅤ
+<img width="270" align="vertical-align:middle" src="src/img/espacio.PNG" alt="Docker"></a></div>
+<img width="270" align="vertical-align:middle" src="src/img/Curva de aprendizaje.PNG" alt="Docker"></a></div>
+</div>
+
 
 
 
