@@ -23,7 +23,7 @@ que permite crear implementar copiar y mover los contenedores de un entorno a ot
 
 
 <div align="center">
-<img width="300" align="vertical-align:middle" src="src/img/contenedor docker.png"></div>
+<img width="260" align="vertical-align:middle" src="src/img/contenedor docker.png"></div>
 
 <div align="center" style="vertical-align:center" >
 <div align="" style="vertical-align:center">
@@ -32,9 +32,36 @@ que permite crear implementar copiar y mover los contenedores de un entorno a ot
 </div>
 
 
-lo que significa que se puede ejecutar más servicios en la misma unidad de hardware reduciendo así los costos lo que es un punto para contenedores y trabaja con imágenes que son plantillas de sólo lectura, que definen su contenedor la imagen contiene el código que se ejecutará incluido
-cualquier definición para cualquier biblioteca o dependencia que el código necesite realmente un contenedor de docker es una imagen de docker instancia da o en ejecución o que permite entregar código con mayor rapidez estandarizar las operaciones de las aplicaciones y transferir el código con facilidad lo que tiene una sintaxis sencilla y simple que aporta un control absoluto a todo la tecnología docker usa el kernel de linux y las funciones de éste pueden ejecutarse de manera independiente ofrecen un modelo de implementación basado en imágenes automatiza la implementación de las aplicaciones o conjuntos combinados de procesos que
+lo que significa que se puede ejecutar más servicios en la misma unidad de hardware reduciendo así los costos lo que es un punto para contenedores y trabaja con imágenes que son plantillas de sólo lectura, que definen su contenedor.
+
+###
+
+<div align="center">
+<img width="270" align="vertical-align:middle" src="src/img/reduciendo costos docker.PNG"></div>
+
+
+
+
+la imagen contiene el código que se ejecutará incluido cualquier definición para cualquier biblioteca o dependencia que el código necesite realmente un contenedor de docker es una imagen de docker instancia da o en ejecución o que permite entregar código con mayor rapidez estandarizar las operaciones de las aplicaciones y transferir el código con facilidad.
+  
+  
+  ####
+  
+  <div align="center">
+<img width="260" align="vertical-align:middle" src="src/img/imagendocker.PNG"></div>
+
+<div align="center" style="vertical-align:center" >
+<div align="" style="vertical-align:center">
+<img width="270" align="vertical-align:middle" src="src/img/estandarizar.PNG" alt="Docker"></a>  ㅤ ㅤ ㅤ ㅤ ㅤ
+<img width="270" align="vertical-align:middle" src="src/img/sintaxis.PNG" alt="Docker"></a></div>
+</div>
+
+
+lo que tiene una sintaxis sencilla y simple que aporta un control absoluto a todo la tecnología docker usa el kernel de linux y las funciones de éste pueden ejecutarse de manera independiente ofrecen un modelo de implementación basado en imágenes automatiza la implementación de las aplicaciones o conjuntos combinados de procesos que
 constituyen una aplicación en un entorno de contenedores algunas de las características principales son portabilidad ligereza autosuficiencia y entre sus ventajas se pueden sonar las higueras se tienen consistencia de versiones reduce el tiempo las actualizaciones y despliegue de las aplicaciones ocupa menos espacio en disco de igual forma se pueden mencionar la curva de aprendizaje que puede ser algo complicado y exigente en un principio y si quieres empezar con
+
+
+
 
 
 ### ㅤㅤ
