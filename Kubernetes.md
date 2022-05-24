@@ -94,6 +94,11 @@ El Monitor de recursos de contenedores almacena de forma centralizada series de 
 El mecanismo de registros del clúster está a cargo de almacenar los registros de los contenedores de forma centralizada, proporcionando una interfaz de búsqueda y navegación.
 
 
+###
+
+<div align="center">
+<img width="550" align="vertical-align:middle" src="src/img/componente.png"></div>
+
 
 
 
