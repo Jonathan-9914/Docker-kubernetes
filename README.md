@@ -95,7 +95,7 @@
 
 [Como se componentes de Nodo]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#componentes-de-nodo
 [kubelet]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#kubelet
- [kube-proxy]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#kubelet
+ [kube-proxy]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#kube-proxy
 [Runtime de contenedores]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#runtime-de-contenedores
 [Addons]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#addons
 [DNS]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#dns
