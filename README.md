@@ -57,7 +57,7 @@
 
 
       - [Ejecución de Kubernetes en AWS]
-          - [Que necesito](#id1)
+          - [Implementación de Kubernetes en AWS con Kops]
  
 [Docker]: https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md
 [Que es Docker]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#que-es-docker
@@ -107,6 +107,7 @@
 
 <!-- indice de aws de Kubernetes-->
 [Ejecución de Kubernetes en AWS]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#ejecuci%C3%B3n-de-kubernetes-en-aws
+[Implementación de Kubernetes en AWS con Kops]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#implementaci%C3%B3n-de-kubernetes-en-aws-con-kops
 
 
 ### ㅤ
