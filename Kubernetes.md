@@ -11,6 +11,19 @@ Google liberó el proyecto Kubernetes en el año 2014. Kubernetes se basa en la 
 
 ## **Como Se Compone Kubernetes**
 
+### Componentes del plano de control
+
+Los componentes que forman el plano de control toman decisiones globales sobre el clúster (por ejemplo, la planificación) y detectan y responden a eventos del clúster, como la creación de un nuevo pod cuando la propiedad replicas de un controlador de replicación no se cumple.
+
+Estos componentes pueden ejecutarse en cualquier nodo del clúster. Sin embargo para simplificar, los scripts de instalación típicamente se inician en el mismo nodo de forma exclusiva, sin que se ejecuten contenedores de los usuarios en esos nodos. El plano de control se ejecuta en varios nodos para garantizar la alta disponibilidad.
+
+ 
+<div align="center">
+<img width="270" align="vertical-align:middle" src="src/img/Kubernetes1 .png"></div>
+
+
+
+
 
 ## **Ejecución de Kubernetes en AWS**
 
