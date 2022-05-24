@@ -19,7 +19,7 @@ Estos componentes pueden ejecutarse en cualquier nodo del clúster. Sin embargo 
 
  
 <div align="center">
-<img width="300" align="vertical-align:middle" src="src/img/Kubernetes1 .png"></div>
+<img width="550" align="vertical-align:middle" src="src/img/Kubernetes1 .png"></div>
 
 
 
