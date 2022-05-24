@@ -88,6 +88,22 @@
 
 <!-- indice kubernetes-->
 [Como se compone Kubernetes]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#como-se-compone-kubernetes
+[kube-apiserver]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#kube-apiserver
+[etcd]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#etcd
+[kube-scheduler]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#kube-scheduler
+[cloud-controller-manager]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#cloud-controller-manager
+
+[Como se componentes de Nodo]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#componentes-de-nodo
+[kubelet]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#kubelet
+ [kube-proxy]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#kubelet
+[Runtime de contenedores]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#runtime-de-contenedores
+[Addons]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#addons
+[DNS]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#dns
+[Interfaz Web (Dashboard)]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#interfaz-web-dashboard
+[Monitor de recursos de contenedores]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#monitor-de-recursos-de-contenedores
+[Registros del clúster]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#registros-del-cl%C3%BAsterDIRE
+
+
 
 <!-- indice de aws de Kubernetes-->
 [Ejecución de Kubernetes en AWS]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#ejecuci%C3%B3n-de-kubernetes-en-aws
