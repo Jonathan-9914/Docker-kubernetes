@@ -117,5 +117,20 @@ Eso sí, antes de continuar, debemos asegurarnos de haber instalado las herramie
 <div align="center" style="vertical-align:center" >
 <div align="" style="vertical-align:center">
 <a href="https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all"><img width="270" align="vertical-align:middle" src="src/img/AmazonEC2.png"></a> ㅤ ㅤ ㅤ ㅤ 
-<a href="https://aws.amazon.com/es/route53/"><img width="255" align="vertical-align:middle" src="src/img/route.png"></a></div>
+<a href="https://aws.amazon.com/es/route53/"><img width="200" align="vertical-align:middle" src="src/img/route.png"></a></div>
 </div>
+
+##
+
+<div align="center" style="vertical-align:center" >
+<div align="" style="vertical-align:center">
+<a href="https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Categories=categories%23storage&trk=ps_a134p000006pao0AAA&trkCampaign=acq_paid_search_brand&sc_channel=PS&sc_campaign=acquisition_IBERIA&sc_publisher=Google&sc_category=Storage&sc_country=IBERIA&sc_geo=EMEA&sc_outcome=acq&sc_detail=amazon%20s3&sc_content=S3_e&sc_matchtype=e&sc_segment=495089204081&sc_medium=ACQ-P%7CPS-GO%7CBrand%7CDesktop%7CSU%7CStorage%7CS3%7CIBERIA%7CEN%7CText&s_kwcid=AL!4422!3!495089204081!e!!g!!amazon%20s3&ef_id=Cj0KCQjwl_SHBhCQARIsAFIFRVWwQmknsGHJd8DK7jdWk9DYTDi_KAlP0IOwD1J1iQTuETDZNIQvn6MaAkTKEALw_wcB:G:s&s_kwcid=AL!4422!3!495089204081!e!!g!!amazon%20s3"><img width="200" align="vertical-align:middle" src="src/img/aws-s3-logo.png"></a> ㅤ ㅤ ㅤ ㅤ 
+<a href="https://aws.amazon.com/es/iam/"><img width="200" align="vertical-align:middle" src="src/img/aws_iam.png"></a></div>
+</div>
+
+##
+
+<div align="center" style="vertical-align:center" >
+<div align="" style="vertical-align:center">
+<a href="https://aws.amazon.com/es/vpc/?vpc-blogs.sort-by=item.additionalFields.createdDate&vpc-blogs.sort-order=desc"><img width="180" align="vertical-align:middle" src="src/img/VPC.png"></a></div>
+
