@@ -90,9 +90,9 @@ algunas de las características principales son portabilidad ligereza autosufici
  
 <div align="center" style="vertical-align:center" >
 <div align="" style="vertical-align:center">
-<img width="250" align="vertical-align:middle" src="src/img/version.PNG"></div>
-<img width="250" align="vertical-align:middle" src="src/img/tiempo.PNG" alt="Docker"></a>  ㅤ ㅤ ㅤ ㅤ ㅤ
-<img width="250" align="vertical-align:middle" src="src/img/espacio.PNG" alt="Docker"></a></div>
+<img width="210" align="vertical-align:middle" src="src/img/version.PNG"></div>
+<img width="210" align="vertical-align:middle" src="src/img/tiempo.PNG" alt="Docker"></a>  ㅤ ㅤ ㅤ ㅤ ㅤ
+<img width="210" align="vertical-align:middle" src="src/img/espacio.PNG" alt="Docker"></a></div>
 </div>
 
 ## Daemon de Docker
