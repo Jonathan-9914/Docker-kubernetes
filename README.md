@@ -48,7 +48,7 @@
 
 <!-- indice de componentes de docker-->
 [Como se compone]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#contenido
-[Daemon de Docker]:https://github.com/Jonathan-9914/Docker-kubernetes/edit/main/Docker.md#daemon-de-docker
+[Daemon de Docker]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#daemon-de-docker
 [La APIREST]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#la-apirest
 [La terminal]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#la-terminal
 
