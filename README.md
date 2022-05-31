@@ -130,7 +130,11 @@
 
 # ***<p align = "center">Bibliografía</p>***
 
+***<p align = "center">Lahtela, M., &amp; Kaplan, P. (P. (1966). ES. Amazon. Retrieved May 31, 2022, from https://aws.amazon.com/es/docker/ </p>*** 
+
 ***<p align = "center">Toda la investigación de aws referente a docker fueron extraidas de (https://aws.amazon.com/es/docker/) </p>***
+
+***<p align = "center">Guía para entender y Desplegar Kubernetes en aws services. IfgeekthenNTTdata. (2022, March 31). Retrieved May 31, 2022, from https://ifgeekthen.nttdata.com/es/guia-para-entender-y-desplegar-kubernetes-en-aws-services</p>***
 
 
 
