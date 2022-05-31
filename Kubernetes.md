@@ -148,3 +148,31 @@ Eso sí, antes de continuar, debemos asegurarnos de haber instalado las herramie
 
 Configurando AWS CLI con las credenciales de usuario ejecutando:
 
+<pre><code class="language-bash hljs "><span class="hljs-comment"># aws configure</span></code></pre>
+
+Crea un bucket de S3 dedicado para el almacenamiento del estado del clúster. El bucket S3 es un contenedor de objetos (archivos) almacenados en S3.
+
+A este depósito lo llamaremos my-cluster-state:
+
+<pre><code class="language-bash hljs "><span class="hljs-comment"># aws s3api create-bucket --bucket my-cluster-state</span></code></pre>
+
+Es importante no olvidarse de  activar el control de versiones del depósito para poder recuperarlo más tarde o volver a un estado anterior en caso de falla:
+
+<pre><code class="language-bash hljs "><span class="hljs-comment"># aws s3api put-bucket-versioning --bucket my-cluster-state --versioning-configuration Estado = Habilitado</span></code></pre>
+
+### Crear el clúster de Kubernetes
+
+Todos los comandos de kops a continuación que incluyen la opción --yes se pueden ejecutar primero sin ella para mostrar qué cambios se llevarían a cabo (por ejemplo, qué recursos de AWS se crearán o destruirán cuando se ejecute el comando con la opción --yes).
+
+<code class="language-bash hljs "><span class="hljs-comment"># kops create cluster \ --name my-cluster.k8s.local \ --zones</span>
+us-west-<span class="hljs-number">2</span>a \ --dns private \ --master-size=m3.medium \ 
+--master-count=<span class="hljs-number">1</span> \ --node-size=t2.medium \ --node-count=<span class="hljs-number">2</span> \ --state 
+s3://my-cluster-state \ --yes</code>
+
+## **Creación de un clúster de Kubernetes a través de Rancher en AWS**
+
+### Configurando la plantilla del entorno de Kubernetes
+
+Un entorno en Rancher es una entidad lógica para compartir implementaciones y recursos con diferentes conjuntos de usuarios. La manera de crear y configurar estos entornos es mediante plantillas. Pero no te preocupes ya que el catálogo de aplicaciones de Rancher incluye plantillas para Kubernetes que se pueden seleccionar y modificar para configurar, entre otras: deshabilitar complementos (Rancher instala por defecto: Helm, Dashboard y SkyDNS), habilitar copias de seguridad y seleccionar el proveedor de nube para administrar balanceadores de carga, nodos y rutas de red.
+
+
