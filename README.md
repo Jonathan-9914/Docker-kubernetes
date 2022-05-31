@@ -58,7 +58,10 @@
 
       - [Ejecución de Kubernetes en AWS]
           - [Implementación de Kubernetes en AWS con Kops]
+              - [Requisitos previos]
+              - [Crear el clúster de Kubernetes]
           - [Creación de un clúster de Kubernetes a través de Rancher en AWS]
+              - [Configurando la plantilla del entorno de Kubernetes]
  
 [Docker]: https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md
 [Que es Docker]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#que-es-docker
@@ -84,6 +87,7 @@
 [Que necesito]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Docker.md#que-necesito
 
 <!-- indice kubernetes-->
+[kubernetes]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#kubernetes
 [Que es Kubernetes]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#que-es-kubernetes
 
 
@@ -92,6 +96,7 @@
 [kube-apiserver]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#kube-apiserver
 [etcd]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#etcd
 [kube-scheduler]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#kube-scheduler
+[kube-controller-manager]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#kube-controller-manager
 [cloud-controller-manager]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#cloud-controller-manager
 
 [Como se componentes de Nodo]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#componentes-de-nodo
@@ -110,6 +115,11 @@
 [Ejecución de Kubernetes en AWS]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#ejecuci%C3%B3n-de-kubernetes-en-aws
 [Implementación de Kubernetes en AWS con Kops]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#implementaci%C3%B3n-de-kubernetes-en-aws-con-kops
 [Creación de un clúster de Kubernetes a través de Rancher en AWS]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#creaci%C3%B3n-de-un-cl%C3%BAster-de-kubernetes-a-trav%C3%A9s-de-rancher-en-aws
+[Requisitos previos]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#requisitos-previos
+[Crear el clúster de Kubernetes]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#crear-el-cl%C3%BAster-de-kubernetes
+[Configurando la plantilla del entorno de Kubernetes]:https://github.com/Jonathan-9914/Docker-kubernetes/blob/main/Kubernetes.md#configurando-la-plantilla-del-entorno-de-kubernetes
+
+
 
 
 ### ㅤ
